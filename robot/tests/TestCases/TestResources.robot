@@ -2,11 +2,11 @@
 #Add this file as Resource in all test case files
 
 #Add all robot libraries here
-Library       SeleniumLibrary
-Library       BuiltIn
-Library       RequestsLibrary
-Library       OperatingSystem
+Library       Browser
 Library       Collections
+Library       RequestsLibrary
+Library       BuiltIn
+Library       OperatingSystem
 Library       String
 #Here is list of all "gatherer" files
 Resource        ../Resources/Resources.robot

@@ -1,9 +1,11 @@
-FROM python:alpine
+FROM marketsquare/robotframework-browser:latest
 
 COPY requirements.txt /tmp/requirements.txt
-RUN pip install --upgrade pip
-RUN pip install -r /tmp/requirements.txt
+RUN pip3 install --upgrade pip
+RUN pip3 install -r /tmp/requirements.txt
 
 COPY tests /tests
 
-ENTRYPOINT [ "robot" ]
+USER root
+RUN chmod -R 777 /tests
+USER pwuser

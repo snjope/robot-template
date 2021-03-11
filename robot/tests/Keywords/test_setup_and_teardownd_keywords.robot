@@ -1,9 +1,9 @@
 *** Keywords ***
 setup browser
-    Open Browser    ${SUT_URL}    browser=${BROWSER}     remote_url=${SELENIUM_HUB}
-    Set Window Size    1920    1080
-    Register Keyword To Run On Failure    Capture Page Screenshot
+    New Browser    ${BROWSER}   headless=true
+    New Context    viewport={'width': 1920, 'height': 1080}
+    New Page  ${SUT_URL}
 
 test teardown
     Delete All Cookies
-    Close All Browsers
+    Close Browser

@@ -6,4 +6,4 @@ Suite Teardown      test teardown
 
 *** Test Cases ***
 Dummy Test
-    Location Should Be  ${SUT_URL}
+    Get Url   equal       ${SUT_URL}

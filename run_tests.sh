@@ -1,6 +1,5 @@
 #!/bin/sh
-
-docker-compose up -d
-sleep 3
-docker-compose run robot -v BROWSER:$1 $2 --outputdir /out /tests
-docker-compose down
+docker build -t robot-browser ./robot
+ docker run --rm \
+     robot-browser \
+       bash -c "robot -v BROWSER:$1 --outputdir /tests/results /tests"
