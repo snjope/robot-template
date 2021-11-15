@@ -18,5 +18,4 @@ jobs:
 
       - name: Run robot tests
         run: |
-        docker run --rm robot-browser bash -c "robot -v BROWSER:$1 --outputdir /tests/results /tests"
-
+          docker run --rm robot-browser bash -c "robot -v BROWSER:$1 --outputdir /tests/results /tests"
